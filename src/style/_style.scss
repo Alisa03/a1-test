@@ -1,0 +1,120 @@
+.container {
+  width: 80%;
+  margin: 0 auto
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem
+}
+
+.section0 {
+  width: 100%;
+  min-height: 100vh;
+  padding:$px20 0;
+
+  text-align: center;
+
+  background: url(../img/background.webp) center bottom no-repeat;
+  background-size: cover;
+
+  &__title {font: 700 3rem/1 $fontTitle}
+
+  &__text {font-size:$px20}
+
+  &__box {width: 40%}
+}
+
+.section1 {
+  width: 100%;
+  padding: 50px 0;
+
+  background: url(../img/background1.webp) no-repeat center bottom;
+  background-size: cover;
+
+  &__img {width: 60%}
+  
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap:$px20
+  }
+
+  &__title {
+    font: 700 1.5rem/1 $fontTitle;
+    color: $blue;
+  }
+}
+
+.thead {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+
+  &__th {
+    padding: 3px;
+
+    border: 1px solid $redTransparent;
+
+    color: $red;
+    font-size: 12px
+  }
+}
+
+.table {
+  border: 1px solid $redTransparent;
+
+  &__row {
+    width: 120px;
+    padding: 5px;
+
+    text-align: center;
+
+    border-top: 1px solid $redTransparent;
+    border-bottom: 1px solid $redTransparent
+  }
+}
+
+.box {
+  &__price {
+    margin-bottom: 10px;
+
+    font-size: 2rem
+  }
+
+  &__btn {
+    padding: 10px 2rem;
+
+    background-color: $yellow;
+    border-radius: 7px;
+    
+    color: $black;
+
+    cursor: pointer;
+    transition: all .7s ease;
+
+    &:hover {background-color: #abae00}
+
+    &:active {background-color: #747601}
+  }
+}
+
+@media (max-width: 1025px) {
+  .section1__flex {flex-direction: column-reverse}
+
+  .section0__box {width: 50%}
+}
+
+@media (max-width: 770px) {
+  .container {width: 90%}
+
+  .section0__box {width: 70%}
+
+  .section0__title {font-style: 2.5rem}
+}
+
+@media (max-width: 350px) {
+  .section0__title {font-size: 2rem}
+}
